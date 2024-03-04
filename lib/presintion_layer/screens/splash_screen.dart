@@ -3,6 +3,7 @@ import 'package:doctor_appointment/core/font_manager.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/color_manager.dart';
+import '../../core/routes/routes.dart';
 import '../../core/text_style/textstyle_manager_inter.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -92,7 +93,9 @@ class IntroScreen extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all<Color>(
                             ColorManager.yellow),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, AppRoute.login);
+                      },
                       child: const Icon(
                         Icons.arrow_forward,
                         color: Colors.black,

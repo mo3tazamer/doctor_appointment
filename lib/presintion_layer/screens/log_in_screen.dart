@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/color_manager.dart';
 import '../../core/font_manager.dart';
+import '../../core/routes/routes.dart';
 import '../../core/text_style/textstyle_manager_inter.dart';
 import '../../core/text_style/textstyle_manager_poppins.dart';
 import '../widgets/my_Text_form_filed.dart';
@@ -122,7 +123,9 @@ class LogInScreen extends StatelessWidget {
                         color: ColorManager.black, fontSize: FontSize.s15),
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, AppRoute.register);
+                      },
                       child: Text(
                         'Register now',
                         style: getBoldStylePoppins(
